@@ -1,10 +1,18 @@
-import React { Component } from 'react';
+import React from 'react';
 import Playlist from '../playlist/components/playlist'
+import './category.css'
 
-class Category extends Component{
-    render(
-        <Playlist/>
-    )
+const Category = props => (
+    <div className="Category">
+        <p className="Category-description">{props.description}</p>
+        <h2 className="Category-title">{props.title}</h2>
+        <Playlist
+            playlist={props.playlist}
+        />
 
-}
+    </div>
+)
+
+
+export default Category
 
