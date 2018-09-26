@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import './media.css';
 
-class Media extends Component {
+class Media extends PureComponent {
     state = {
         author: 'Daniel'
     }
@@ -15,7 +15,7 @@ class Media extends Component {
         //this.handleClick = this.handleClick.bind(this);
     }*/
     handleClick = (event) => {
-        console.log(this.props.title)
+        //console.log(this.props.title)
         this.setState({
             author: 'Pino'
         })
