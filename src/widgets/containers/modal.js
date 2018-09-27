@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { createPortal } from 'react-dom'
 
-const ModalContainer = props => (
-
-)
+class ModalContainer extends Component {
+    render() {
+        return createPortal(
+            this.props.children,
+            document.getElementById('modal-container')
+        )
+    }
+}
 
 export default ModalContainer

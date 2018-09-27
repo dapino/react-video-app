@@ -11,12 +11,10 @@ class Media extends PureComponent {
         }
         //this.handleClick = this.handleClick.bind(this);
     }*/
-    handleClick = (event) => {
 
-    }
     render() {
         return (
-            <div className="Media" onClick={this.handleClick}>
+            <div className="Media" onClick={this.props.handleClick}>
                 <div className="Media-cover">
                     <img src={ this.props.cover }
                          alt=""
