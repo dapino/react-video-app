@@ -1,11 +1,11 @@
 import React from 'react'
 import Category from "./category"
 import './categories.css'
-import Search from "../widgets/components/search";
+import SearchContainer from "../widgets/containers/search";
 
 const Categories = props => (
     <div className="Categories">
-        <Search/>
+        <SearchContainer/>
         {
             props.categories.map( item => (
                 <Category
