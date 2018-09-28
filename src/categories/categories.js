@@ -6,7 +6,11 @@ const Categories = props => (
     <div className="Categories">
         {
             props.categories.map( item => (
-                <Category key={item.id} {...item}/>
+                <Category
+                    key={item.id}
+                    {...item}
+                    handleOpenModal={props.handleOpenModal}
+                />
             ))
         }
     </div>

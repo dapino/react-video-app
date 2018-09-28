@@ -4,17 +4,18 @@ import Categories from "../../categories/categories";
 import Related from "../components/related";
 import ModalContainer from "../../widgets/containers/modal";
 import Modal from "../../widgets/components/modal";
+import HandleError from "../../error/containers/handle-error";
 
 class Home extends Component {
     state = {
-        modalVisible: false
+        modalVisible: false,
     }
-    handleOpenModal = e => {
-        this.setState([
+    handleOpenModal = () => {
+        this.setState({
             modalVisible: true
-        ])
+        })
     }
-    handleCloseModal = e => {
+    handleCloseModal = () => {
         this.setState({
             modalVisible: false
         })
@@ -22,21 +23,26 @@ class Home extends Component {
 
     render() {
         return (
-            <HomeLayout>
-                <Related />
-                <Categories categories={this.props.data.categories}/>
-                {
-                    this.state.modalVisible &&
+            <HandleError>
+                <HomeLayout>
+                    <Related />
+                    <Categories
+                        categories={this.props.data.categories}
+                        handleOpenModal={this.handleOpenModal}
+                    />
+                    {
+                        this.state.modalVisible &&
 
-                    <ModalContainer>
-                        <Modal
-                            handleClick={this.handleCloseModal}
-                        >
-                            <h1>Esto es un portal</h1>
-                        </Modal>
-                    </ModalContainer>
-                }
-            </HomeLayout>
+                        <ModalContainer>
+                            <Modal
+                                handleClick={this.handleCloseModal}
+                            >
+                                <h1>portal</h1>
+                            </Modal>
+                        </ModalContainer>
+                    }
+                </HomeLayout>
+            </HandleError>
         );
     }
 }
