@@ -4,16 +4,9 @@ import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends PureComponent {
-    handleClick = (event) => {
+    handleClick = event => {
         this.props.openModal(this.props);
     }
-    /*constructor(props) {
-        super(props);
-        this.state = {
-            author: props.author
-        }
-        //this.handleClick = this.handleClick.bind(this);
-    }*/
 
     render() {
         return (

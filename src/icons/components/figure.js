@@ -20,7 +20,7 @@ const Volume = props => (
     </Icon>
 )
 
-const Fullscreen = props => (
+const FullScreen = props => (
     <Icon {...props}>
         <path d="M32 0h-13l5 5-6 6 3 3 6-6 5 5z"></path>
         <path d="M32 32v-13l-5 5-6-6-3 3 6 6-5 5z"></path>
@@ -29,4 +29,4 @@ const Fullscreen = props => (
     </Icon>
 )
 
-export default {Play, Pause, Volume, Fullscreen};
+export default {Play, Pause, Volume, FullScreen};

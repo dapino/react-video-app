@@ -1,5 +1,6 @@
 import React from 'react'
 import Figure from "../../icons/components/figure";
+import './play-pause.css'
 
 const PlayPause = props => (
     <div className="PlayPause">
@@ -9,8 +10,8 @@ const PlayPause = props => (
                     onClick={props.handleClick}
                 >
                     <Figure.Play
-                        fill="white"
-                        size={24}
+                        color="white"
+                        size={25}
                     />
                 </button>
 
@@ -19,8 +20,8 @@ const PlayPause = props => (
                     onClick={props.handleClick}
                 >
                     <Figure.Pause
-                        fill="white"
-                        size={24}
+                        color="white"
+                        size={25}
                     />
                 </button>
         }
