@@ -36,6 +36,7 @@ class Home extends Component {
                     <Categories
                         categories={this.props.categories}
                         handleOpenModal={this.handleOpenModal}
+                        search={this.props.search}
                     />
                     {
                         this.state.modalVisible &&
@@ -59,7 +60,10 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state, props) => (
-    { categories: state.data.categories }
+    {
+        categories: state.data.categories,
+        search: state.search
+    }
 )
 
 export default connect(mapStateToProps)(Home)
